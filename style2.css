@@ -1,0 +1,83 @@
+/* Orange underline under headings */
+.underline {
+height:3px !important; 
+background:#f15a29; 
+bottom:0;
+}
+/* Vertical orange line for quote */
+.quote-box {
+  border-left: 4px solid #f15a29;
+  padding-left: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+/* Section background (light gray like in screenshot) */
+.seminars-section {
+  background-color: #f8f9fa; /* Bootstrap's light gray */
+}
+
+/* White card with rounded corners + shadow */
+.seminar-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  max-width: 900px;
+  text-align: left;
+}
+
+/* Orange text (same as underline color before) */
+.text-orange {
+  color: #f15a29;
+}
+  .mastermind-section {
+    background: linear-gradient(180deg, #0b1a33, #1d2440); /* Dark gradient */
+  }
+  .full-orange-line {
+    height: 3px;
+    background-color: #ff5e2b;
+    width: 100%;
+  }
+  .text-orange {
+    color: #ff5e2b;
+  }
+/* Remove only Bootstrap's default chevron */
+.accordion-button {
+  --bs-accordion-btn-icon: none;
+  --bs-accordion-btn-active-icon: none;
+  box-shadow: none !important;
+  justify-content: space-between;
+   font-weight: 700 !important;
+}
+
+/* Custom orange + / - */
+.accordion-button::after {
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff5e2b;       /* orange */
+  transform: none !important; /* stop Bootstrap from rotating */
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: "-";
+}
+
+.text-orange {
+  color: #ff5e2b !important;
+}
+.btn-orange {
+  background-color: #ff5e2b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+}
+.btn-orange:hover {
+  background-color: #ff5e2b; /* keep same orange background */
+  color: #1d2440; /* accordion background blue */
+}
+.accordion-button:focus,
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}

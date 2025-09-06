@@ -1,0 +1,254 @@
+.banner {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-orange {
+  color: #ff5e2b !important;
+}
+
+/* Remove any accidental underline or border */
+.banner h1,
+.banner h2,
+.banner p {
+  border: none !important;
+  text-decoration: none !important;
+}
+
+.who-should-attend-list {
+  max-width: 900px;       /* keeps bullets from stretching full width */
+  margin: 0 auto;         /* centers the whole block */
+  padding-left: 9rem;   /* small indent for bullets */
+  list-style-type: disc;  /* show bullets */
+  list-style-position: outside;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.who-should-attend-list li {
+  color: #fff;
+}
+.carousel-cards {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+.carousel-cards::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.carousel-cards .card {
+  scroll-snap-align: start;
+  width: 340px;       /* larger width */
+  min-height: 300px;  /* larger height */
+  border-radius: 20px;
+  background: #111;
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.circle-num {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ff5e2b;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.workshop-box {
+  background: #000;        /* pure black background */
+  width: 90%;              /* narrower than full width */
+  margin: 0 auto;          /* centers the box */
+  border-radius: 8px;      /* optional: slight rounding */
+}
+
+
+/* Wider cards */
+.carousel-cards .card {
+  flex: 0 0 420px;   /* wider than before (was 340px) */
+  height: 380px;     /* keep the same height */
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  color: #fff;
+}
+
+/* Dark overlay to improve text visibility */
+.carousel-cards .card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55); /* dark tint */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* text at bottom */
+  padding: 30px;
+}
+  /* Default large screen styles */
+  .banner-heading {
+    color: #ff5e2b;
+    font-size: 2.2rem;
+  }
+  .banner-subheading {
+    font-size: 1.5rem;
+  }
+  .banner-list {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  /* Tablet adjustments */
+  @media (max-width: 991px) {
+    .banner-heading {
+      font-size: 2rem;
+    }
+    .banner-subheading {
+      font-size: 1.3rem;
+    }
+    .banner-list {
+      font-size: 1rem;
+    }
+  }
+
+  /* Mobile general
+  @media (max-width: 576px) {
+    .banner-heading {
+      font-size: 1.6rem;
+    }
+    .banner-subheading {
+      font-size: 1.1rem;
+    }
+    .banner-list {
+      font-size: 0.95rem;
+    }
+  }
+
+  /* Special for 400px–450px screens */
+  /* @media (min-width: 400px) and (max-width: 450px) {
+    .banner-box {
+      max-width: 92%;   /* makes text block narrower */
+      /* margin: 0 auto;      /* make it span a bit more */
+    /* padding-left: 6px;  /* tighter left padding */
+    /* padding-right: 6px;  /* centers the box */
+    /* } */
+   
+@media (max-width: 991px) {
+  .banner .container {
+    max-width: 100% !important;  /* full width */
+    padding-left: 0 !important;  /* remove padding */
+    padding-right: 0 !important;
+  }
+
+  .banner-content {
+    padding-left: 12px;   /* small spacing so text doesn’t touch edge */
+    padding-right: 12px;
+    text-align: left !important;
+  }
+
+  .banner-content h2,
+  .banner-content p {
+    text-align: left !important; /* headings also left aligned */
+  }
+
+  .banner-content ul {
+    padding-left: 18px !important;  /* bullets aligned neatly */
+    margin-left: 0 !important;
+  }
+
+  .banner-content ul li {
+    text-align: left !important;
+    font-size: 0.95rem;  /* slightly smaller for mobile */
+    line-height: 1.4;
+  }
+}
+/* Tablet */
+@media (max-width: 991px) {
+  .agenda-table td {
+    display: block;          /* stack cells vertically */
+    width: 100% !important;  /* full width for each cell */
+    text-align: left;
+  }
+
+  .agenda-table tr {
+    display: block;
+    margin-bottom: 1rem;     /* spacing between agenda items */
+  }
+
+  .agenda-table td:first-child {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+}
+
+/* Mobile (extra small) */
+@media (max-width: 575px) {
+  .agenda-table td {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .agenda-table td:first-child {
+    font-size: 1rem;
+  }
+}
+
+/* Default: Desktop stays full height */
+.banner {
+  min-height: 100vh; /* full screen */
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .banner-content {
+    align-items: center;   /* vertical center */
+    padding-top: 3rem;     /* adjust spacing */
+    padding-bottom: 3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .banner-content {
+    align-items: center;   /* vertical center */
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+}
+.circle-num {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff7a3d, #ff5e2b);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Glow shadow around circle */
+  box-shadow: 0 0 20px 5px rgba(255, 122, 61, 0.6);
+}
+
+#featured-3 h4 {
+  font-weight: 700;
+}
+#featured-3 p {
+  color: #333;
+  font-size: 0.95rem;
+}
